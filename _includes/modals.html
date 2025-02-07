@@ -36,6 +36,12 @@
               </li>
               {% endif %}
             </ul>
+            <!-- Add Resume Button -->
+            {% if post.resume %}
+            <a href="{{ post.resume | relative_url }}" class="btn btn-primary" target="_blank">
+              <i class="fas fa-file-pdf"></i> View Resume
+            </a>
+            {% endif %}
             <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i>
               Close</button>
           </div>

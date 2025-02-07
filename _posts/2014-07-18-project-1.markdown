@@ -1,11 +1,9 @@
 ---
+title: Research Interests
 layout: default
 modal-id: 1
-date: 2014-07-18
-img: cabin.png
+date: 2025-02-07
+img: 1.png
 alt: image-alt
-project-date: April 2014
-client: Start Bootstrap
-category: Web Development
-description: Use this area of the page to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.
+description: My research interests currently are in HCI and AR/VR, specifically examining the way humans perceive and interact with mixed reality technology to inform the way we use it in the future. My work is currently in the Four Eyes Lab with Professor Tobias Hollerer. I am also currently a GSR for Professor Phill Conrad in the research area of Software Engineering Education. In undergrad, I was also in the Bionic Vision Lab and RACE Lab at UCSB.
 ---
