@@ -42,6 +42,11 @@
               <i class="fas fa-file-pdf"></i> View Resume
             </a>
             {% endif %}
+            {% if post.publication %}
+            <a href="{{ post.publication | relative_url }}" class="btn btn-primary" target="_blank">
+              <i class="fas fa-file-pdf"></i> View PDF
+            </a>
+            {% endif %}
             <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i>
               Close</button>
           </div>

@@ -1,0 +1,37 @@
+<!-- Experience Section -->
+<section class="experience" id="experience">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 text-center">
+        <h2>Professional + Research Experience</h2>
+        <hr class="star-light">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2">
+        <div> </div>
+          <li class="experience-item">Masters Research, Four Eyes Lab</li>
+          <li class="experience-item">Teaching Assistant, CS156</li>
+          <li class="experience-item">Grad Student Researcher, Software Engineering</li>
+          <li class="experience-item">Software Engineering Intern at Dropbox</li>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <!-- other scripts… -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const items = document.querySelectorAll('.experience-item');
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.2 });
+      items.forEach(item => observer.observe(item));
+    });
+  </script>
+</body>

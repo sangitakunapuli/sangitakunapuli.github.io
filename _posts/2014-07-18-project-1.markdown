@@ -1,9 +1,9 @@
 ---
-title: Research Interests
+title: Research Experience
 layout: default
 modal-id: 1
 date: 2025-02-07
 img: 1.png
 alt: image-alt
-description: My research interests currently are in HCI and AR/VR, specifically examining the way humans perceive and interact with mixed reality technology to inform the way we use it in the future. My work is currently in the Four Eyes Lab with Professor Tobias Hollerer. I am also currently a GSR for Professor Phill Conrad in the research area of Software Engineering Education. In undergrad, I was also in the Bionic Vision Lab and RACE Lab at UCSB.
+description: For my master's research I focused on HCI and AR/VR, specifically examining the way humans perceive and interact with mixed reality technology to inform the way we use it in the future. My work was done as part of UCSB's Four Eyes Lab under Professor Tobias Hollerer. I previously also held a Teaching Assistant position and a Graduate Student Researcher position for Professor Phill Conrad in the research area of Software Engineering Education. In undergrad, I contributed to the Computer Science research community through the Bionic Vision Lab (computer vision and accessibility) & RACE Lab (IoT and edge computing) at UCSB.
 ---

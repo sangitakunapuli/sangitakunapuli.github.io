@@ -4,5 +4,6 @@ layout: default
 modal-id: 3
 img: 3.png
 alt: image-alt
-description: No publications currently, but fingers crossed there are a few in the works!
+description: Exploring Factors Influencing Object Recall in Augmented Reality
+publication: /img/portfolio/pub.pdf
 ---
