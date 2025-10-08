@@ -1,9 +1,0 @@
----
-title: Publications
-layout: default
-modal-id: 3
-img: 3.png
-alt: image-alt
-description: Exploring Factors Influencing Object Recall in Augmented Reality
-publication: /img/portfolio/pub.pdf
----
