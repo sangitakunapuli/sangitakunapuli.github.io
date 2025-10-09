@@ -108,7 +108,7 @@ export const SITE_CONTENT: SiteContent = {
     },
     {
       name: "Gaucho Grub",
-      summary: "UI/UX design of mobile app to view UCSB dining hall info.",
+      summary: "UI/UX design of mobile app to interact with UCSB dining hall info.",
       linkPreview: "https://www.figma.com/proto/OB7QuJL8qnJUvQpn2eDbSa/Team-21---Pixel-Pioneers?node-id=0-1&t=cdTiC7tCgWZwOGms-1",
       linkSource: "https://drive.google.com/file/d/19jRyI1B1vUF_USt7Dt-7IDM7QjSdO6gZ/view?usp=sharing",
       image: "/dining.png",
