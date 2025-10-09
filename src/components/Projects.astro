@@ -8,18 +8,46 @@ interface Props {
 }
 
 const { projects } = Astro.props;
+
+const STICKY_TOP = 98;
+const STACK_STEP = 40;
+const STACK_SPACER = STICKY_TOP + (projects.length - 1) * STACK_STEP;
+
+const tagClass = (t: string) => {
+  const map: Record<string, string> = {
+    "Unity": "bg-emerald-500/10 text-emerald-200 border-emerald-500/30",
+    "Python": "bg-amber-500/10 text-amber-200 border-amber-500/30",
+    "Research": "bg-fuchsia-500/10 text-fuchsia-200 border-fuchsia-500/30",
+    "Figma": "bg-lime-500/10 text-lime-200 border-lime-500/30",
+    "React Native": "bg-pink-500/10 text-pink-200 border-pink-500/30",
+    "C#": "bg-indigo-500/10 text-indigo-200 border-indigo-500/30",
+    "R": "bg-violet-500/10 text-violet-200 border-violet-500/30",
+    "Xcode": "bg-rose-500/10 text-rose-200 border-rose-500/30",
+    "ARKit": "bg-green-500/10 text-green-200 border-green-500/30",
+    "AI": "bg-sky-500/10 text-sky-200 border-sky-500/30",
+    "C++": "bg-cyan-500/10 text-cyan-200 border-cyan-500/30",
+    "Flutter": "bg-blue-500/10 text-blue-200 border-blue-500/30",
+    "UI/UX": "bg-teal-500/10 text-teal-200 border-teal-500/30",
+    "Mobile": "bg-yellow-500/10 text-yellow-200 border-yellow-500/30",
+    "Tensorflow": "bg-orange-500/10 text-orange-200 border-orange-500/30",
+    "PostgreSQL": "bg-red-500/10 text-red-200 border-red-500/30",
+  };
+  return map[t] ?? "bg-white/5 text-neutral-200 border-neutral/20";
+};
+
 ---
 
 <Section text="Featured Projects" href="projects">
   {
-    projects.map(({ name, summary, image, linkPreview, linkSource }, index) => {
-      const top = 98 + index * 40;
+    projects.map(({ name, summary, image, linkPreview, linkSource, tags }, index) => {
+      const top = STICKY_TOP + index * STACK_STEP;
+      const z = index + 1; // later cards are on top
       return (
         <div
-          style={`top: ${top}px;`}
+          style={`top:${top}px;`}
           class="sticky mb-12 rounded-2xl border border-neutral/20 bg-black"
         >
-          <div class="bg-difu relative z-[1] grid h-[580px] w-full grid-rows-2 rounded-2xl bg-[#1c232d]/85 before:absolute before:inset-0 before:z-[-1] before:rounded-2xl before:bg-[url(/raja.png)] before:bg-[length:128px] before:bg-repeat before:opacity-[5%] before:content-[''] sm:grid-cols-2 sm:grid-rows-1 md:h-96">
+          <div class="relative z-[1] grid h-[580px] w-full grid-rows-2 rounded-2xl bg-[#1c232d]/85 before:absolute before:inset-0 before:z-[-1] before:rounded-2xl before:bg-[url(/raja.png)] before:bg-[length:128px] before:bg-repeat before:opacity-[5%] sm:grid-cols-2 sm:grid-rows-1 md:h-96">
             <div class="px-6 pt-12">
               <h3 class="mb-5 font-serif text-3xl font-medium text-primary">
                 {name}
@@ -41,19 +69,36 @@ const { projects } = Astro.props;
                   Preview
                 </a>
               </div>
+
+              {/* Tags */}
+              {tags?.length ? (
+                <ul role="list" class="mt-4 flex flex-wrap gap-2">
+                  {tags.map((t) => (
+                    <li class={`rounded-full px-3 py-1 text-sm border ${tagClass(t)}`}>
+                      {t}
+                    </li>
+                  ))}
+                </ul>
+              ) : null}
             </div>
+
+
+
             <div class="flex items-end justify-end overflow-hidden">
               <Image
-                class="h-full w-[95%] rounded-ss-xl rounded-ee-2xl object-none object-left-top sm:h-[85%] sm:w-full"
+                class="h-full w-full rounded-ss-xl rounded-ee-2xl object-cover object-center transform origin-bottom-right scale-90 sm:scale-95"
                 src={image}
                 alt={name}
                 width="736"
                 height="483"
               />
             </div>
+
+
           </div>
         </div>
       );
     })
   }
+
 </Section>
