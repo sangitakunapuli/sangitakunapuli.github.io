@@ -1,7 +1,7 @@
 import type { SiteConfig, SiteContent } from "../types";
 
 export const SITE_CONFIG: SiteConfig = {
-  title: "Sangita Kunapuli — Fullstack Software Developer",
+  title: "Sangita Kunapuli — Full Stack Software Engineer",
   author: "Sangita Kunapuli",
   description:
     "Recent Computer Science Master’s graduate from UCSB, based in the Bay Area, California. I am passionate about designing intuitive user interfaces, web application development, and writing quality code with impact.",
@@ -13,11 +13,8 @@ export const SITE_CONFIG: SiteConfig = {
     { text: "About", href: "#about" },
   ],
   socialLinks: [
-    // { text: "Twitter", href: "https://github.com/immois/astro-zen" },
     { text: "Linkedin", href: "https://www.linkedin.com/in/sangita-kunapuli" },
     { text: "Github", href: "https://github.com/sangitakunapuli" },
-    // { text: "Youtube", href: "https://github.com/immois/astro-zen" },
-    // { text: "Dribbble", href: "https://github.com/immois/astro-zen" },
   ],
   socialImage: "/zen-og.png",
   canonicalURL: "https://astro-zen.vercel.app",
@@ -26,12 +23,22 @@ export const SITE_CONFIG: SiteConfig = {
 export const SITE_CONTENT: SiteContent = {
   hero: {
     name: "Sangita Kunapuli",
-    specialty: "Fullstack Software Developer",
+    specialty: "Full-Stack Software Engineer",
     summary:
-      "Recent Computer Science Master’s graduate from UCSB, based in the Bay Area. I am passionate about designing intuitive user experiences and writing quality code with impact.",
+      "Recent Computer Science Master’s graduate from UCSB, based in the Bay Area. I love to design intuitive user experiences and writing quality code with impact on real-world applications.",
     email: "sangita.kunapuli@gmail.com",
   },
   experience: [
+    {
+      company: "Four Eyes Lab",
+      position: "HCI & Augmented Reality Researcher",
+      startDate: "Sept 2024",
+      endDate: "Sept 2025",
+      summary: [
+        "Design and instrument end-to-end AR experimentation system (Unity, Magic Leap 2) to log interaction events, accuracy, confidence scores, and workload metrics across 32 users x 8 trials, enabling statistically robust analysis",
+        "Evaluate participant trends with R, showing that explicit task cueing produced a statistically significant (p < 0.05) improvement in object recall accuracy for in-scene items, validating realtime cue driven performance gains in AR interfaces",
+      ],
+    },
     {
       company: "UC Santa Barbara",
       position: "Teaching Assistant",
@@ -75,6 +82,14 @@ export const SITE_CONTENT: SiteContent = {
   ],
   projects: [
     {
+      name: "Splitzies",
+      summary: "Mobile app to split restaurant bills with friends.",
+      linkPreview: "https://drive.google.com/file/d/1qwpZ-z9rEcfSOM2G_ys58X_cIebZGzy8/view?usp=sharing",
+      linkSource: "https://github.com/sangitakunapuli/receipt-split-ocr",
+      image: "/splitzie.png",
+      tags: ["React Native", "Expo", "Google Vision API", "Mobile", "Codex"]
+    },
+    {
       name: "Object Recall in Augmented Reality",
       summary: "AR immersive office environment with Magic Leap 2 and HCI user study.",
       linkPreview: "https://drive.google.com/file/d/1qwpZ-z9rEcfSOM2G_ys58X_cIebZGzy8/view?usp=sharing",
@@ -111,7 +126,7 @@ export const SITE_CONTENT: SiteContent = {
       summary: "UI/UX design of mobile app to interact with UCSB dining hall info.",
       linkPreview: "https://www.figma.com/proto/OB7QuJL8qnJUvQpn2eDbSa/Team-21---Pixel-Pioneers?node-id=0-1&t=cdTiC7tCgWZwOGms-1",
       linkSource: "https://drive.google.com/file/d/19jRyI1B1vUF_USt7Dt-7IDM7QjSdO6gZ/view?usp=sharing",
-      image: "/dining.png",
+      image: "/gacho.png",
       tags: ["Figma", "UI/UX", "Mobile"]
     },
     {
@@ -133,7 +148,7 @@ export const SITE_CONTENT: SiteContent = {
   ],
   about: {
     description: `
-    Hi there, I’m Sangita! I just completed my Master's in Computer Science at the University of California, Santa Barbara. I am an aspiring software engineer with a passion for building web applications and designing intuitive user experiences.
+    Hi there, I’m Sangita! I completed my Master's and Bachelors in Computer Science at the University of California, Santa Barbara. I am an aspiring software engineer with a passion for building web applications and designing intuitive user experiences.
 
     With experience in developing for applications of AR and industry/research experience in software engineering, I always enjoy tackling complex problems to improve user experiences and leverage human-AI interaction.
     
