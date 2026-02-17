@@ -23,7 +23,7 @@ export const SITE_CONFIG: SiteConfig = {
 export const SITE_CONTENT: SiteContent = {
   hero: {
     name: "Sangita Kunapuli",
-    specialty: "Full-Stack Software Engineer",
+    specialty: "Full Stack Software Engineer",
     summary:
       "Recent Computer Science Master’s graduate from UCSB, based in the Bay Area. I love to design intuitive user experiences and writing quality code with impact on real-world applications.",
     email: "sangita.kunapuli@gmail.com",
