@@ -25,10 +25,20 @@ export const SITE_CONTENT: SiteContent = {
     name: "Sangita Kunapuli",
     specialty: "Full Stack Software Engineer",
     summary:
-      "Recent Computer Science Master’s graduate from UCSB, based in the Bay Area. I love to design intuitive user experiences and writing quality code with impact on real-world applications.",
+      "Recent Computer Science Master’s graduate from UCSB. I am passionate about designing intuitive user interfaces, web application development, and writing quality code with impact.",
     email: "sangita.kunapuli@gmail.com",
   },
   experience: [
+    {
+      company: "Handshake AI",
+      position: "AI Model Trainer - Software Engineering Domain",
+      startDate: "May 2026",
+      endDate: "Present",
+      summary: [
+        "Analyze complex codebases and evaluate LLM-generated solutions across software engineering tasks, identifying correctness issues, edge cases, and reasoning failures to improve model reliability for millions of AI coding-agent users",
+        "Develop expert-level coding and multimodal reasoning benchmarks, assessing performance on technical content including source code, charts, diagrams, and scientific documents to guide model training",
+      ],
+    },
     {
       company: "Four Eyes Lab",
       position: "HCI & Augmented Reality Researcher",
