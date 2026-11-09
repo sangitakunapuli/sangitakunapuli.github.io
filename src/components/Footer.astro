@@ -1,33 +1,23 @@
 ---
 import type { SiteConfig } from "@types";
-
-type Props = Pick<SiteConfig, "author" | "socialLinks">;
-
-const { author, socialLinks } = Astro.props;
-const currentYear = new Date().getFullYear();
+type Props = Pick<SiteConfig, "author" | "socialLinks"> & { email: string };
+const { author, socialLinks, email } = Astro.props;
 ---
 
-<footer
-  class="w-full border-t border-neutral/20 px-5 pt-5 pb-8 text-center text-white"
->
-  <ul class="mb-5 flex flex-wrap justify-center gap-x-5 text-xs">
+<footer class="site-footer">
+  <a class="footer-contact" href={`mailto:${email}`}
+    >Contact me <span aria-hidden="true">↗</span></a
+  >
+  <ul>
     {
       socialLinks.map(({ text, href }) => (
         <li>
-          <a
-            href={href}
-            target="_blank"
-            class="inline-block px-4 py-3 after:relative after:bottom-[-4px] after:content-[url(/external.svg)] hover:text-primary"
-          >
-            {text}
+          <a href={href} target="_blank" rel="noopener noreferrer">
+            {text} <span aria-hidden="true">↗</span>
           </a>
         </li>
       ))
     }
   </ul>
-  <p class="text-xs">
-    {author} © {currentYear}. <span class="text-neutral"
-      >Based on design by</span
-    > Moisés Machuca
-  </p>
+  <p>{author} © {new Date().getFullYear()}</p>
 </footer>

@@ -1,27 +1,50 @@
 ---
 import type { HeroProps } from "@types";
 type Props = HeroProps;
-
-const { name, specialty, summary, email } = Astro.props;
+const { name, specialty, summary } = Astro.props;
+const [firstName, ...lastName] = name.split(" ");
 ---
 
-<section class="py-24 md:py-32" id="#hero">
-  <h1
-    class="mb-1.5 font-serif text-7xl font-bold tracking-tightest text-white sm:text-8xl md:mb-0 md:text-9xl"
-  >
-    {name}
-  </h1>
-  <p
-    class="mb-9 font-serif text-4xl leading-[46px] font-bold tracking-tighter text-primary sm:text-5xl md:text-6xl"
-  >
-    {specialty}
-  </p>
-  <p class="mb-16 text-base font-normal text-neutral md:text-lg">
-    {summary}
-  </p>
-
-  <a
-    class="inline-block rounded-full bg-primary px-8 py-5 text-sm leading-5 font-medium text-[#fff]"
-    href={`mailto:${email}`}>Connect with me</a
-  >
+<section class="hero" id="hero" aria-labelledby="hero-title">
+  <canvas class="mouse-ribbon" aria-hidden="true"></canvas>
+  <div class="hero-copy">
+    <p class="eyebrow">{specialty}</p>
+    <h1 id="hero-title">{firstName}<br /><em>{lastName.join(" ")}.</em></h1>
+    <p class="hero-summary">{summary}</p>
+    <a class="primary-link" href="#projects"
+      >View projects <span aria-hidden="true">↓</span></a
+    >
+  </div>
+  <div class="hero-art">
+    <a
+      class="cube-link"
+      href="#project-ar"
+      aria-label="Explore my augmented reality research"
+      data-ar-link
+    >
+      <span class="cube-glow" aria-hidden="true"></span>
+      <span class="spatial-cube" aria-hidden="true">
+        <span class="cube-face cube-back"></span><span
+          class="cube-face cube-bottom"></span>
+        <span class="cube-face cube-left"></span>
+        <span class="spatial-item spatial-sphere"></span><span
+          class="spatial-item spatial-block"></span>
+        <span class="spatial-item spatial-ring"></span><span
+          class="spatial-focus"></span>
+        <span class="cube-face cube-right"></span><span
+          class="cube-face cube-top"></span>
+        <span class="cube-face cube-front"></span>
+      </span>
+    </a>
+    <a
+      class="cube-caption"
+      href="https://arxiv.org/abs/2610.18183"
+      target="_blank"
+      rel="noopener noreferrer"
+    >Read my paper from ISMAR 2026 (Honorable Mention) <span aria-hidden="true">↗</span></a>
+  </div>
+  <p class="hero-foot">Web · Mobile · Augmented Reality</p>
 </section>
+<script>
+  import "../scripts/hero";
+</script>

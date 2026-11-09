@@ -8,8 +8,8 @@ export const SITE_CONFIG: SiteConfig = {
   lang: "en",
   siteLogo: "/sangita-small.png",
   navLinks: [
-    { text: "Experience", href: "#experience" },
     { text: "Projects", href: "#projects" },
+    { text: "Experience", href: "#experience" },
     { text: "About", href: "#about" },
   ],
   socialLinks: [
@@ -17,7 +17,7 @@ export const SITE_CONFIG: SiteConfig = {
     { text: "Github", href: "https://github.com/sangitakunapuli" },
   ],
   socialImage: "/zen-og.png",
-  canonicalURL: "https://astro-zen.vercel.app",
+  canonicalURL: "https://sangitakunapuli.github.io",
 };
 
 export const SITE_CONTENT: SiteContent = {
@@ -25,7 +25,7 @@ export const SITE_CONTENT: SiteContent = {
     name: "Sangita Kunapuli",
     specialty: "Full Stack Software Engineer",
     summary:
-      "Recent Computer Science Master’s graduate from UCSB. I am passionate about designing intuitive user interfaces, web application development, and writing quality code with impact.",
+      "Recent Computer Science Master’s graduate from UCSB. I enjoy designing intuitive user interfaces and developing full stack web applications",
     email: "sangita.kunapuli@gmail.com",
   },
   experience: [
@@ -158,9 +158,9 @@ export const SITE_CONTENT: SiteContent = {
   ],
   about: {
     description: `
-    Hi there, I’m Sangita! I completed my Master's and Bachelors in Computer Science at the University of California, Santa Barbara. I am an aspiring software engineer with a passion for building web applications and designing intuitive user experiences.
+    Hi there, I’m Sangita! I completed my Masters and Bachelors in Computer Science at the University of California, Santa Barbara.
 
-    With experience in developing for applications of AR and industry/research experience in software engineering, I always enjoy tackling complex problems to improve user experiences and leverage human-AI interaction.
+    With experience in developing for applications of Augmented Reality and industry + research experience in software engineering, I always enjoy tackling complex problems to improve user experiences and leverage human-AI interaction.
     
     When I’m not coding or designing, you can find me at the gym, trying out a new recipe I found on Instagram, or bullet journaling!
     `,
