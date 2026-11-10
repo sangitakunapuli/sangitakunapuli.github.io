@@ -95,6 +95,7 @@ export const SITE_CONTENT: SiteContent = {
       name: "Sun & Moon",
       summary: "A two-player collaborative indie game inspired by Fireboy and Watergirl, built for remote friends to play together on two devices.",
       linkPreview: "https://sun-and-moon-one.vercel.app/",
+      linkSource: "https://github.com/sangitakunapuli/sun-and-moon",
       previewLabel: "Try it out",
       image: "/sun-and-moon.png",
       tags: ["JavaScript", "HTML", "Node.js", "WebSockets"]
