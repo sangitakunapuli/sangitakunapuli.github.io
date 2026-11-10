@@ -92,6 +92,13 @@ export const SITE_CONTENT: SiteContent = {
   ],
   projects: [
     {
+      name: "Sun & Moon",
+      summary: "A two-player collaborative indie game inspired by Fireboy and Watergirl, built for remote friends to play together on two devices.",
+      linkPreview: "https://sun-and-moon-one.vercel.app/",
+      image: "/sun-and-moon.png",
+      tags: ["Multiplayer", "Co-op", "Web Game"]
+    },
+    {
       name: "Splitzies",
       summary: "Mobile app to split restaurant bills with friends.",
       linkPreview: "https://drive.google.com/file/d/1qwpZ-z9rEcfSOM2G_ys58X_cIebZGzy8/view?usp=sharing",

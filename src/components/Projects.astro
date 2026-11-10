@@ -44,7 +44,7 @@ const { projects } = Astro.props;
         const isAR = project.name === "Object Recall in Augmented Reality";
         // The original AR preview duplicates the Splitzies video; retain the research slides instead.
         const preview =
-          isAR && project.linkPreview === projects[0]?.linkPreview
+          isAR && project.linkPreview === projects.find(({ name }) => name === "Splitzies")?.linkPreview
             ? undefined
             : project.linkPreview;
         return (
