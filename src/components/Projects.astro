@@ -89,7 +89,7 @@ const { projects } = Astro.props;
                 )}
                 {preview && (
                   <a href={preview} target="_blank" rel="noopener noreferrer">
-                    Preview <span aria-hidden="true">↗</span>
+                    {project.previewLabel ?? "Preview"} <span aria-hidden="true">↗</span>
                   </a>
                 )}
               </div>
