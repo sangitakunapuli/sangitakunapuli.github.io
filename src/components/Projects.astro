@@ -53,13 +53,7 @@ const { projects } = Astro.props;
             id={isAR ? "project-ar" : `project-${index + 1}`}
             aria-labelledby={`project-title-${index}`}
           >
-            <button
-              type="button"
-              class="project-image-button"
-              data-screenshot={project.image}
-              data-project-name={project.name}
-              aria-label={`Enlarge ${project.name} screenshot`}
-            >
+            <div class="project-image">
               <img
                 src={project.image}
                 alt={`${project.name} screenshot`}
@@ -69,10 +63,7 @@ const { projects } = Astro.props;
                 height="483"
                 draggable="false"
               />
-              <span class="image-expand">
-                Enlarge <span aria-hidden="true">↗</span>
-              </span>
-            </button>
+            </div>
             <div class="project-copy">
               <h3 id={`project-title-${index}`}>{project.name}</h3>
               <p>{project.summary}</p>
@@ -130,16 +121,6 @@ const { projects } = Astro.props;
       rel="noopener noreferrer"
       >More on GitHub <span aria-hidden="true">↗</span></a>
   </div>
-  <dialog class="screenshot-dialog" aria-labelledby="screenshot-title">
-    <div class="dialog-header">
-      <h3 id="screenshot-title"></h3><button
-        type="button"
-        class="round-button"
-        data-close-screenshot
-        aria-label="Close screenshot">×</button>
-    </div>
-    <img alt="" data-large-screenshot />
-  </dialog>
 </section>
 <script>
   import "../scripts/projects";

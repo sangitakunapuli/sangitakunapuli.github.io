@@ -176,45 +176,6 @@ if (section && grid) {
     }),
   );
 
-  const dialog =
-    section.querySelector<HTMLDialogElement>(".screenshot-dialog")!;
-  const title = dialog.querySelector<HTMLElement>("#screenshot-title")!;
-  const image = dialog.querySelector<HTMLImageElement>(
-    "[data-large-screenshot]",
-  )!;
-  let opener: HTMLButtonElement | undefined;
-  let originalOverflow = "";
-  grid
-    .querySelectorAll<HTMLButtonElement>("[data-screenshot]")
-    .forEach((button) => {
-      button.addEventListener("click", () => {
-        opener = button;
-        title.textContent = button.dataset.projectName || "Project screenshot";
-        image.src = button.dataset.screenshot || "";
-        image.alt = `${title.textContent} screenshot`;
-        originalOverflow = document.body.style.overflow;
-        document.body.style.overflow = "hidden";
-        dialog.showModal();
-      });
-    });
-  dialog
-    .querySelector<HTMLButtonElement>("[data-close-screenshot]")!
-    .addEventListener("click", () => dialog.close());
-  dialog.addEventListener("click", (event) => {
-    if (event.target !== dialog) return;
-    const bounds = dialog.getBoundingClientRect();
-    if (
-      event.clientX < bounds.left ||
-      event.clientX > bounds.right ||
-      event.clientY < bounds.top ||
-      event.clientY > bounds.bottom
-    )
-      dialog.close();
-  });
-  dialog.addEventListener("close", () => {
-    document.body.style.overflow = originalOverflow;
-    opener?.focus({ preventScroll: true });
-  });
   document
     .querySelectorAll<HTMLAnchorElement>("[data-ar-link]")
     .forEach((link) => {
@@ -225,7 +186,7 @@ if (section && grid) {
         scrollToCard(cards.indexOf(card));
         section.scrollIntoView({ behavior: behavior(), block: "start" });
         card
-          .querySelector<HTMLButtonElement>("button")
+          .querySelector<HTMLAnchorElement>(".project-links a")
           ?.focus({ preventScroll: true });
       });
     });

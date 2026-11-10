@@ -406,7 +406,7 @@ h1 em {
   border-color: #b19ad5;
   box-shadow: 0 12px 25px #7053991a;
 }
-.project-image-button {
+.project-image {
   display: block;
   position: relative;
   width: 100%;
@@ -420,7 +420,7 @@ h1 em {
     #f2eef6 70%
   );
 }
-.project-image-button img {
+.project-image img {
   width: 100%;
   height: 100%;
   object-fit: contain;
@@ -428,9 +428,6 @@ h1 em {
   border-radius: 9px;
   transition: transform 0.25s;
   pointer-events: none;
-}
-.project-image-button:hover img {
-  transform: scale(1.025);
 }
 .image-expand {
   position: absolute;
@@ -547,39 +544,13 @@ h1 em {
   transform: translateY(-3px);
   background: #e7daf9;
 }
-.screenshot-dialog {
-  width: min(1000px, calc(100% - 32px));
-  max-height: calc(100dvh - 40px);
-  margin: auto;
-  padding: 20px;
-  border: 1px solid #dfd4ea;
-  border-radius: 18px;
-  background: #fffdfa;
-  color: var(--ink);
-  overflow: auto;
-}
 .screenshot-dialog::backdrop {
   background: #24182b99;
   backdrop-filter: blur(5px);
 }
-.dialog-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 20px;
-  padding-bottom: 16px;
-}
 .dialog-header h3 {
   font-size: 20px;
   font-weight: 500;
-}
-.screenshot-dialog img {
-  display: block;
-  width: 100%;
-  max-height: 75dvh;
-  object-fit: contain;
-  background: #f4f0f7;
-  border-radius: 10px;
 }
 .experience-section {
   padding-top: 78px;
@@ -817,7 +788,7 @@ h1 em {
   .gallery-status {
     font-size: 11px;
   }
-  .project-image-button {
+  .project-image {
     height: 230px;
   }
   .project-copy h3 {
@@ -928,3 +899,6 @@ h1 em {
 /* Keep gallery controls aligned without a hint label. */
 .gallery-controls { justify-content: flex-end; }
 .cube-caption { max-width: 300px; text-align: center; line-height: 1.6; }
+
+.hero-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; margin-top: 28px; }
+.hero-actions .primary-link { margin-top: 0; gap: 18px; }
