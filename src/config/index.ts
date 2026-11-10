@@ -97,7 +97,7 @@ export const SITE_CONTENT: SiteContent = {
       linkPreview: "https://sun-and-moon-one.vercel.app/",
       previewLabel: "Try it out",
       image: "/sun-and-moon.png",
-      tags: ["JavaScript", "HTML Canvas", "Node.js", "WebSockets"]
+      tags: ["JavaScript", "HTML", "Node.js", "WebSockets"]
     },
     {
       name: "Splitzies",
