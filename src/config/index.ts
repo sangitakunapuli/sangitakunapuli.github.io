@@ -101,6 +101,15 @@ export const SITE_CONTENT: SiteContent = {
       tags: ["JavaScript", "HTML", "Node.js", "WebSockets"]
     },
     {
+      name: "Aligned",
+      summary: "A resume review app that compares resumes with job descriptions and suggests line-specific edits, with Google sign-in and saved review history.",
+      linkPreview: "https://tailor-resume-lyart.vercel.app/",
+      linkSource: "https://github.com/sangitakunapuli/tailor-resume",
+      previewLabel: "Try it out",
+      image: "/aligned-resume.png",
+      tags: ["Next.js", "TypeScript", "OpenAI", "Neon Postgres"]
+    },
+    {
       name: "Splitzies",
       summary: "Mobile app to split restaurant bills with friends.",
       linkPreview: "https://drive.google.com/file/d/1qwpZ-z9rEcfSOM2G_ys58X_cIebZGzy8/view?usp=sharing",
