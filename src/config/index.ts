@@ -107,7 +107,7 @@ export const SITE_CONTENT: SiteContent = {
       linkSource: "https://github.com/sangitakunapuli/tailor-resume",
       previewLabel: "Try it out",
       image: "/aligned-resume.png",
-      tags: ["Next.js", "TypeScript", "OpenAI", "Neon Postgres"]
+      tags: ["Next.js", "TypeScript", "OpenAI API", "Neon Postgres"]
     },
     {
       name: "Splitzies",
