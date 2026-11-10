@@ -25,7 +25,7 @@ export const SITE_CONTENT: SiteContent = {
     name: "Sangita Kunapuli",
     specialty: "Full Stack Software Engineer",
     summary:
-      "Recent Computer Science Master’s graduate from UCSB. I enjoy designing intuitive user interfaces and developing full stack web applications",
+      "Recent Computer Science Master’s graduate from UCSB. I enjoy designing intuitive user interfaces and developing full stack web applications.",
     email: "sangita.kunapuli@gmail.com",
   },
   experience: [
