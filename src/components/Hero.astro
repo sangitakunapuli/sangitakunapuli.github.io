@@ -1,7 +1,7 @@
 ---
 import type { HeroProps } from "@types";
 type Props = HeroProps;
-const { name, specialty, summary, email } = Astro.props;
+const { name, specialty, summary } = Astro.props;
 const [firstName, ...lastName] = name.split(" ");
 ---
 
@@ -13,7 +13,7 @@ const [firstName, ...lastName] = name.split(" ");
     <p class="hero-summary">{summary}</p>
     <div class="hero-actions">
       <a class="primary-link" href="#projects">View projects <span aria-hidden="true">↓</span></a>
-      <a class="primary-link" href={`mailto:${email}`}>Connect with me <span aria-hidden="true">↗</span></a>
+      <a class="primary-link" href="https://www.linkedin.com/in/sangita-kunapuli" target="_blank" rel="noopener noreferrer">Connect with me <span aria-hidden="true">↗</span></a>
     </div>
   </div>
   <div class="hero-art">
